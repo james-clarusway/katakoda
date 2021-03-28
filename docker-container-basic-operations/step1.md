@@ -4,7 +4,7 @@
 
 - Run either `docker` or `docker help` to see the help docs about docker commands.
 
-`docker help`
+`docker help`{{copy}}
 
 
 - Run `docker COMMAND --help` to see more information about specific command.
