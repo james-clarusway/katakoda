@@ -10,4 +10,4 @@
 - Run `docker COMMAND --help` to see more information about specific command.
 
 
-`docker run --help`
+`docker run --help`{{copy}}
