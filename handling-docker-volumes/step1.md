@@ -31,19 +31,25 @@ When we type ls command in alpine terminal, we can see the sample folder.
 We create a file in the sample folder and exit.
 
 `ls`{{copy}} 
+
 `cd sample`{{copy}} 
+
 `echo "this is added in first container" >> file1.txt`{{copy}} 
+
 `exit`{{copy}} 
 
 Let's remove the alpine container.
 
 `docker container ls -a`{{copy}} 
+
 `docker container rm <ContainerId>`{{copy}} 
 
 Let's check the file1.txt.
 
 `docker volume inspect firstvolume`{{copy}}
+
 `cd /var/lib/docker/volumes/firstvolume/_data`{{copy}}
+
 `cat file1.txt`{{copy}}
 
 As we see above, file1.txt is still there even if we remove the container.
