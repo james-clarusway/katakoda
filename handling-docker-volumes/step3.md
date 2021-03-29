@@ -4,14 +4,14 @@ For some development applications, the container needs to write into the bind mo
 
 `docker container run -it -v firstvolume:/try3:ro centos sh`{{copy}}
 
-`ls`
+`ls`{copy}}
 
-`cd try3`
+`cd try3`{copy}}
 
 `ls`{{copy}}  
 
 Let's try to add a file to the volume.
 
-`touch file3`
+`touch file3`{copy}}
 
 As we see above, We can not create a file.

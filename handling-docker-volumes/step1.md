@@ -25,9 +25,6 @@ Volumes can be declared on the command-line, with the --volume or -v  flag for d
 
 When we type ls command in alpine terminal, we can see the sample folder.
 
-`docker container run -it -v firstvolume:/sample alpine sh`{{copy}} 
-
-
 We create a file in the sample folder and exit.
 
 `ls`{{copy}} 

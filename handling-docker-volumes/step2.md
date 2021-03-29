@@ -1,10 +1,12 @@
+## Usage volume with different containers
+
 Let's run an alpine image and this time we will create try1 folder instead of sample folder.
 
 `docker container run -it -v firstvolume:/try1 alpine sh`{{copy}}
 
 `ls`{{copy}}
 
-`try1`{{copy}}
+`cd try1`{{copy}}
 
 `ls`{{copy}}
 
@@ -20,6 +22,8 @@ We can add a new file to the try1 folder.
 
 `cat file2.txt`{{copy}}
 
+`exit`{{copy}}
+
 Let's create an ubuntu image.
 
 `docker container run -it -v firstvolume:/try2 ubuntu sh`{{copy}}
@@ -29,5 +33,7 @@ Let's create an ubuntu image.
 `cd try2`{{copy}}
 
 `ls`{{copy}}
+
+`exit`{{copy}}
 
 As we see above, We can use the same volumes with different containers.
