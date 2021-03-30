@@ -25,10 +25,6 @@ docker run -dit --name clarus4th alpine ash
 
 docker network connect clarusnet clarus4th`{{copy}}
 
-![Katacoda Logo](./Screenshot-from-2021-03-30-12-15-16.png)
-
-![User Defined Bridge Network](./Screenshot-from-2021-03-30-12-15-16.png)
-
 - List all running containers and show there up and running.
 
 `docker container ls`{{copy}}
