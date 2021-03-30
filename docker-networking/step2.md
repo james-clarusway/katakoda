@@ -16,13 +16,9 @@
 - Run four `alpine` containers with interactive shell, in detached mode, name the containers as `clarus1st`, `clarus2nd`, `clarus3rd` and `clarus4th`, and add command to run alpine shell. Here, 1st and 2nd containers should be in `clarusnet`, 3rd container should be in default network bridge, 4th container should be in both `clarusnet` and default network bridge.
 
 `docker run -dit --network clarusnet --name clarus1st alpine ash
-
 docker run -dit --network clarusnet --name clarus2nd alpine ash
-
 docker run -dit --name clarus3rd alpine ash
-
 docker run -dit --name clarus4th alpine ash
-
 docker network connect clarusnet clarus4th`{{copy}}
 
 - List all running containers and show there up and running.
