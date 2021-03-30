@@ -38,6 +38,8 @@ docker run -dit --name clarus2nd alpine ash`{{copy}}
 
 `ping -c 4 clarus2nd`{{copy}}
 
+- Exit from container.
+
 - Stop and delete the containers
 
 `
