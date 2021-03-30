@@ -31,9 +31,8 @@ docker run -dit --name clarus2nd alpine ash`{{copy}}
 
 - Ping `clarus2nd `container by its IP four times to show the connection.
 
-```bash
-ping -c 4 <clarus2nd-ip>{{copy}}
-```
+`ping -c 4 <clarus2nd-ip>`{{copy}}
+
 
 - Try to ping `clarus2nd `container by its name, should face with bad address. Because, containers on the default bridge network can only access each other by IP addresses. 
 
