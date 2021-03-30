@@ -38,7 +38,7 @@ docker run -dit --name clarus2nd alpine ash`{{copy}}
 
 `ping -c 4 clarus2nd`{{copy}}
 
-- Disconnect from `clarus1st` without stopping it (CTRL + p + q).
+- Open a new terminal.
 
 - Stop and delete the containers
 

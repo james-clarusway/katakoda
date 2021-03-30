@@ -25,7 +25,7 @@ docker network connect clarusnet clarus4th`{{copy}}
 
 `docker container ls`{{copy}}
 
-- Show the details of `clarusnet`, and explain newly added containers. (1st, 2nd, and 4th containers should be in the list)
+- Show the details of `clarusnet`, and see that newly added containers. (1st, 2nd, and 4th containers should be in the list)
 
 `docker network inspect clarusnet`{{copy}}
 
@@ -37,7 +37,7 @@ docker network connect clarusnet clarus4th`{{copy}}
 
 `docker attach clarus1st`{{copy}}
 
-- Ping `clarus2nd` and `clarus4th` container by its name to show that in user-defined network, container names can be used in networking.
+- Ping `clarus2nd` and `clarus4th` container by its name. Notice that, container names can be used in networking in user-defined network.
 
 `ping -c 4 clarus2nd
 ping -c 4 clarus4th`{{copy}}
@@ -45,15 +45,14 @@ ping -c 4 clarus4th`{{copy}}
 - Try to ping `clarus3rd` container by its name and IP, should face with bad address because 3rd container is in different network.
 
 `ping -c 4 clarus3rd`{{copy}}
-`ping -c 4 172.17.0.2`{{copy}}
+
+`ping -c 4 <clarus3rd-ip>`{{copy}}
 
 - Ping google.com to check internet connection.
 
-```bash
-ping -c 4 google.com
-```
+`ping -c 4 google.com`{{copy}}
 
-- Exit the `clarus1st` container without stopping. (CTRL + p + q)
+- Open a new terminal.
 
 - Connect to the `clarus4th` container, since it is in both network should connect all containers.
 
@@ -63,7 +62,7 @@ ping -c 4 google.com
 
 `ping -c 4 clarus1st
 ping -c 4 clarus2nd
-ping -c 4 172.17.0.2`{{copy}}
+ping -c 4 <clarus3rd-ip>`{{copy}}
 
 - Stop and remove all containers
 
