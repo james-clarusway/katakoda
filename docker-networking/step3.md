@@ -5,12 +5,8 @@
 
 `docker run --rm -d -p 8080:80 --name ng nginx`{{copy}}
 
-- Add a security rule for protocol HTTP port 8080 and show Nginx Web Server is running on Docker Machine.
+- Select port to view on Host1 and select port:8080. Check that, nginx server is running.
 
-```text
-http://ec2-18-232-70-124.compute-1.amazonaws.com:8080
-```
-
-- Stop container `ng`, should be removed automatically due to `--rm` flag.
+- Stop container `ng`, must be removed automatically due to `--rm` flag.
 
 `docker stop ng`{{copy}}
