@@ -20,9 +20,9 @@ docker run -dit --network clarusnet --name clarus2nd alpine ash
 docker run -dit --name clarus3rd alpine ash
 docker run -dit --name clarus4th alpine ash
 docker network connect clarusnet clarus4th`{{copy}}
-a
+
 ![User Defined Bridge Network](./user-defined-bridge-network.png)
-b
+
 - List all running containers and show there up and running.
 
 `docker container ls`{{copy}}
