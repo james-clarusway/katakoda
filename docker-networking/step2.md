@@ -21,7 +21,7 @@ docker run -dit --name clarus3rd alpine ash
 docker run -dit --name clarus4th alpine ash
 docker network connect clarusnet clarus4th`{{copy}}
 
-![User Defined Bridge Network](./user-defined-bridge-network.png)
+![User Defined Bridge Network](/katakoda/docker-networking/user-defined-bridge-network.png)
 
 - List all running containers and show there up and running.
 
