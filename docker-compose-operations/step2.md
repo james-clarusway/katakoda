@@ -13,7 +13,7 @@ The web service uses an image that’s built from the Dockerfile in the current 
 The redis service uses a public Redis image pulled from the Docker Hub registry.
 ```
 
-`cat << EOF >> docker-compose.yml
+`cat << EOF > docker-compose.yml
 version: "3"
 services:
   web:
