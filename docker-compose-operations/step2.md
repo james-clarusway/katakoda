@@ -19,9 +19,8 @@ services:
   web:
     build: .
     ports:
-EOF`{{copy}}
       - "5000:5000"
-
+EOF`{{copy}}
 
   redis:
     image: "redis:alpine"
