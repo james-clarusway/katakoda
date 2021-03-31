@@ -19,7 +19,7 @@ services:
   web:
     build: .
     ports:
-      \- "5000:5000"
+      \\- "5000:5000"
 EOF`{{copy}}
 
   redis:
