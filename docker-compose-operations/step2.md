@@ -22,8 +22,7 @@ services:
       - "5000:5000"
   redis:
     image: "redis:alpine"
-EOF
-`{{copy}}
+EOF`{{copy}}
 
 - Build and run your app with `Docker Compose`.
 
