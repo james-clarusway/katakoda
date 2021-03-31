@@ -18,9 +18,8 @@ version: "3"
 services:
   web:
     build: .
-EOF`{{copy}}
-
     ports:
+EOF`{{copy}}
       - "5000:5000"
 
 
