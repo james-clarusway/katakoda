@@ -15,6 +15,8 @@ The redis service uses a public Redis image pulled from the Docker Hub registry.
 
 `cat << EOF > docker-compose.yml
 version: "3"
+EOF`{{copy}}
+
 services:
   web:
     build: .
