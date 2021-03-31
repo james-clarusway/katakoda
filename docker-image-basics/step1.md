@@ -7,7 +7,9 @@
 - Download Docker image `ubuntu`.
 
 `# Defaults to ubuntu:latest`
+
 `docker image pull ubuntu`{{copy}}
+
 `docker image ls`{{copy}}
 
 - Run `ubuntu` as container with interactive shell open.
@@ -17,6 +19,7 @@
 - Display the `ubuntu` os info on the container Note that the release `20.04` of ubuntu. Then exit the container.
 
 `cat /etc/os-release`{{copy}}
+
 `exit`{{copy}}
 
 - Download earlier version (`18.04`) of `ubuntu` image, which is tagged as `18.04` on Docker Hub.
@@ -24,7 +27,7 @@
 `docker image pull ubuntu:18.04
 docker image ls`{{copy}}
 
-- Inspect `ubuntu` image and explain properties.
+- Inspect `ubuntu` images. Pay attention to RepoTags.
 
 `# Defaults to ubuntu:latest`
 `docker image inspect ubuntu`{{copy}}
