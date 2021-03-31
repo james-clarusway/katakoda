@@ -2,7 +2,8 @@
 
 - Create a file called `app.py` in your project folder and paste the following python code in it. In this example, the application uses the Flask framework and maintains a hit counter in Redis, and  `redis` is the hostname of the `Redis container` on the application’s network. We use the default port for Redis, `6379`.
 
-`cat << EOF > app.py
+`
+cat << EOF > app.py
 import time
 
 import redis
@@ -28,6 +29,7 @@ def get_hit_count():
 def hello():
     count = get_hit_count()
     return 'Hello World! I have been seen {} times.\n'.format(count)
+
 EOF`{{copy}}
 
 - Create another file called `requirements.txt` in your project folder, add `flask` and `redis` as package list.
