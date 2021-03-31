@@ -58,4 +58,5 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 EXPOSE 5000
 COPY . .
-CMD ["flask", "run"]`{{copy}}
+CMD ["flask", "run"]
+EOF`{{copy}}
