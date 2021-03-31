@@ -1,0 +1,1 @@
+Purpose of this tutorial is to give the students understanding to images in Docker.
