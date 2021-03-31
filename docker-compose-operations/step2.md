@@ -15,13 +15,13 @@ The redis service uses a public Redis image pulled from the Docker Hub registry.
 
 `cat << EOF > docker-compose.yml
 version: "3"
-EOF`{{copy}}
-
 services:
   web:
     build: .
     ports:
       - "5000:5000"
+EOF`{{copy}}
+
   redis:
     image: "redis:alpine"
 EOF`{{copy}}
