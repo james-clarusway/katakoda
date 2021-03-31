@@ -1,1 +1,0 @@
-Purpose of this tutorial is to learn setting up a docker swarm cluster.
