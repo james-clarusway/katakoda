@@ -6,24 +6,8 @@
 import time
 import redis
 from flask import Flask
-app = Flask(__name__)
-cache = redis.Redis(host='redis', port=6379)
-
-def get_hit_count():
-    retries = 5
-    while True:
-        try:
-            return cache.incr('hits')
-        except redis.exceptions.ConnectionError as exc:
-            if retries == 0:
-                raise exc
-            retries -= 1
-            time.sleep(0.5)
-@app.route('/')
-def hello():
-    count = get_hit_count()
-    return 'Hello World! I have been seen {} times.\n'.format(count)
 EOF`{{copy}}
+
 
 `cat << EOF > app.py
 import time
@@ -48,6 +32,9 @@ def hello():
     return 'Hello World! I have been seen {} times.\n'.format(count)
 EOF`{{copy}}
 
+
+
+
 - Create another file called `requirements.txt` in your project folder, add `flask` and `redis` as package list.
 
 `cat << EOF > requirements.txt
@@ -57,7 +44,7 @@ EOF`{{copy}}
 
 - Create a Dockerfile which builds a Docker image.
 
-```text
+`
 This image contains all the dependencies for the application, including Python itself.
 1. Build an image starting with the Python 3.7 image.
 2. Set the working directory to `/code`.
@@ -67,7 +54,7 @@ This image contains all the dependencies for the application, including Python i
 6. Add metadata to the image to describe that the container is listening on port 5000
 7. Copy the current directory `.` in the project to the workdir `.` in the image.
 8. Set the default command for the container to flask run.
-```
+`
 
 `cat << EOF > Dockerfile
 FROM python:3.7-alpine
