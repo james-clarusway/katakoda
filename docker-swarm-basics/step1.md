@@ -22,7 +22,7 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 - Check if the `docker swarm` is active on host-1. Note that swarm part of `docker info` is active.
 
-`docker info` {{copy}}
+`docker info`{{copy}}
 
 - List the connected nodes in `Swarm`.
 

@@ -1,23 +1,15 @@
-## Updating and Rolling Back in Docker Swarm
+## Global mod
 
-- Create a new service of `clarusway/container-info:1.0` with 10 replicas.
+- Create service in `global mod`.
 
-`docker service create --name clarusweb -p 80:80 --replicas=10 clarusway/container-info:1.0`{{copy}}
+`docker service create --name glbserver --mode=global -p 80:80 nginx`{{copy}}
 
-- Inspect the `docker service update` command.
+- Remove a container and pay attention that swarm creates a new task immediately.
 
-`docker service update --help`{{copy}}
+`docker container ls`{{copy}}
+`docker container rm -f <containerid>`{{copy}}
+`docker service ps glbserver`{{copy}}
 
-- Update `clarusway/container-info:1.0` image with `clarusway/container-info:2.0` image.
+- Remove the `glbserver` service.
 
-`docker service update --detach --update-delay 5s --update-parallelism 2 --image clarusway/container-info:2.0 clarusweb`{{copy}}
-`watch docker service ps clarusweb`{{copy}}
-
-- Revert back to the earlier state of `clarusweb` service and monitor the changes.
-
-`docker service rollback --detach clarusweb`{{copy}}
-`watch docker service ps clarusweb`{{copy}}
-
- - Remove the service.
-
-`docker service rm clarusweb`{{copy}}
+`docker service rm glbserver`{{copy}}

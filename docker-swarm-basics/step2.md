@@ -20,6 +20,4 @@
 
 - Fetch the logs of the service or a task.
 
-```bash
-docker service logs webserver
-```
+`docker service logs webserver`{{copy}}
