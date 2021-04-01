@@ -25,6 +25,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "openjdk:11"
+    "imageid": "ubuntu:20.04"
   }
 }
