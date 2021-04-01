@@ -1,8 +1,8 @@
 {
   "title": "Docker Swarm Basic Operations",
-  "description": "Purpose of this tutorial is to give students the understanding to the Docker Swarm basic operations.",
-  "difficulty": "Beginner",
-  "time": "20m",
+  "description": "Purpose of this tutorial  is to learn the Docker Swarm basic operations.",
+  "difficulty": "Intermediate",
+  "time": "20 minutes",
   "details": {
     "steps": [
       {
@@ -34,7 +34,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "imageid": "docker-swarm"
