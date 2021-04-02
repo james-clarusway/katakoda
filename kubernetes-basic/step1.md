@@ -12,4 +12,4 @@
 
 - Get the list of pods on master and check the status and readiness of `nginx-server`
 
-`kubectl get pods -o wide`
+`kubectl get pods -o wide`{{copy}}
