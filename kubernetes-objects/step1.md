@@ -19,6 +19,23 @@ spec:
 '> mypod.yaml
 ```{{copy}}
 
+```
+cat << EOF > mypod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: mynginx
+    image: nginx:1.19
+    ports:
+    - containerPort: 80
+EOF
+```{{copy}}
+
 - Create a pod with `kubectl create` command.
 
 `kubectl create -f mypod.yaml`{{copy}}
