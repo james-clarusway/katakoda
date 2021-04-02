@@ -33,7 +33,7 @@ EOF
 - Add `version: v1` to `web-flask.yaml --> spec.template.metadata.labels`. So that you end up with:
 
 ```
-cat << EOF > web-svc.yaml
+cat << EOF > web-flask.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -66,7 +66,7 @@ EOF
 - Add `test: coupling` to `web-flask.yaml --> spec.template.metadata.labels`. So that you end up with:
 
 ```
-cat << EOF > web-svc.yaml
+cat << EOF > web-flask.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -93,6 +93,6 @@ EOF
 
 - Push your configuration changes to the cluster.
 
-`kubectl apply -f web-flask-development.yaml`{{copy}}
+`kubectl apply -f web-flask.yaml`{{copy}}
 
 - Reload the page again, and we see the page although the `Pods` have additional labels that the `Service` is not selecting on.

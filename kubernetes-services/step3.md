@@ -58,3 +58,5 @@ EOF
 - List the services and notice that nodeport numer is 30036.
 
 `kubectl get svc -o wide`{{copy}}
+
+- Select port to view on Host1 and select port:30036 to see web page.

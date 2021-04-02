@@ -6,10 +6,6 @@ Each Service that is created automatically gets an associated Endpoint object. T
 
 Kubernetes is constantly evaluating the Service’s label selector against the current list of Pods in the cluster. Any new Pods that match the selector get added to the Endpoint object, and any Pods that disappear get removed. This ensures the Service is kept up-to-date as Pods come and go.
 
-- Get the documentation of `Endpoints` and its fields.
-
-`kubectl explain ep`{{copy}}
-
 - List the Endpoints.
 
 `kubectl get ep -o wide`{{copy}}
