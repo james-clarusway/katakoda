@@ -47,9 +47,3 @@ EOF
 - Delete replicasets
 
 `kubectl delete replicaset <replicaset-name>`{{copy}}
-
-### Pod Selector
-
-The .spec.selector field is a label selector. 
-
-The `.spec.selector` field and `.spec.template.metadata.label` field must be same.
