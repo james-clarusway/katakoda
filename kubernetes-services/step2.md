@@ -54,3 +54,8 @@ EOF
 `kubectl exec -it clarus-db -- sh`{{copy}}
 
 `curl <cluster-ip>:3000`{{copy}}
+
+- To connect web-flask page, we can use service name, in our case it is `web-flask-svc`, instead of cluster ip.
+
+`kubectl exec -it clarus-db -- sh`{{copy}}
+`curl web-flask-svc:3000`{{copy}}
