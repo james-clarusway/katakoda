@@ -18,12 +18,14 @@
 
 - Create a new YAML file called `my-namespace.yaml` with the following content.
 
-`cat << EOF > my-namespace.yaml
+```
+cat << EOF > my-namespace.yaml
 apiVersion: v1
 kind: Namespace
 metadata:
   name: clarus-namespace
-EOF`{{copy}}
+EOF
+```{{copy}}
 
 - Create a namespace using the `my-namespace.yaml` file.
 

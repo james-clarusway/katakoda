@@ -3,23 +3,6 @@
 - Create yaml file named `mypod.yaml`.
 
 ```
-echo '
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx-pod
-  labels:
-    app: nginx
-spec:
-  containers:
-  - name: mynginx
-    image: nginx:1.19
-    ports:
-    - containerPort: 80
-'> mypod.yaml
-```{{copy}}
-
-```
 cat << EOF > mypod.yaml
 apiVersion: v1
 kind: Pod

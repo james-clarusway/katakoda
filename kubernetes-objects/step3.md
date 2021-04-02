@@ -2,7 +2,8 @@
 
 - Create yaml file named `mydeployment.yaml`.
 
-`cat << EOF > mydeployment.yaml
+```
+cat << EOF > mydeployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,7 +25,8 @@ spec:
         image: nginx:1.19
         ports:
         - containerPort: 80
-EOF`{{copy}}
+EOF
+```{{copy}}
 
 - Create the deployment with `kubectl apply` command.
   

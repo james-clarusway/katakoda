@@ -7,7 +7,8 @@ cd deployment-lesson`{{copy}}
 
 - Create a clarus-deploy.yaml and input text below. Pay attention that image version is 1.0.
 
-`cat << EOF > clarus-deploy.yaml
+```
+cat << EOF > clarus-deploy.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -31,7 +32,8 @@ spec:
         image: clarusways/container-info:1.0
         ports:
         - containerPort: 80
-EOF`
+EOF
+```{{copy}}
 
 - Create the deployment with `kubectl apply` command.
 
