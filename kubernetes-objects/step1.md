@@ -17,7 +17,7 @@ spec:
     ports:
     - containerPort: 80
 '> mypod.yaml
- `{{copy}}
+`{{copy}}
 
 - Create a pod with `kubectl create` command.
 
