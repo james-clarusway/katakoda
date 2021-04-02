@@ -2,7 +2,7 @@
 
 - Create yaml file named `mypod.yaml`.
 
-`
+```
 echo '
 apiVersion: v1
 kind: Pod
@@ -17,7 +17,7 @@ spec:
     ports:
     - containerPort: 80
 '> mypod.yaml
-`{{copy}}
+```{{copy}}
 
 - Create a pod with `kubectl create` command.
 
