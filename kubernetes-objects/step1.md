@@ -1,3 +1,8 @@
+- Check the readiness of nodes at the cluster on master node.
+
+`kubectl cluster-info
+kubectl get nodes`{{copy}}
+
 ## pods
 
 - Create yaml file named `mypod.yaml`.
