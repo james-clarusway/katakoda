@@ -2,7 +2,7 @@
 
 - Create yaml file named `mypod.yaml`.
 
-```cat << EOF > mypod.yaml
+`echo '
 apiVersion: v1
 kind: Pod
 metadata:
@@ -15,7 +15,7 @@ spec:
     image: nginx:1.19
     ports:
     - containerPort: 80
-EOF```{{copy}}
+ '> mypod.yaml`{{copy}}
 
 - Create a pod with `kubectl create` command.
 
