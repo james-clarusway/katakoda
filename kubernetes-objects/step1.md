@@ -15,7 +15,8 @@ spec:
     image: nginx:1.19
     ports:
     - containerPort: 80
- '> mypod.yaml`{{copy}}
+ '> mypod.yaml
+ `{{copy}}
 
 - Create a pod with `kubectl create` command.
 
