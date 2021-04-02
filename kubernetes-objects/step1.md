@@ -48,6 +48,6 @@ EOF
 
 `kubectl delete -f mypod.yaml`{{copy}}
 
-# or
+or
 
 `kubectl delete pod nginx-pod`{{copy}}
