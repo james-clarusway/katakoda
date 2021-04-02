@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: web-flask-pod
-        image: clarusways/cw_web_flask1
+        image: clarusway/cw_web_flask1
         ports:
         - containerPort: 5000
 EOF
@@ -64,21 +64,21 @@ cat << EOF > forping.yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: for-ping
+  name: forping
 spec:
   containers:
   - name: forping
     image: clarusway/forping
     imagePullPolicy: IfNotPresent
   restartPolicy: Always
+EOF
 ```{{copy}}
 
 - Create the `forping` pod and log into the container.
 
-`kubectl apply -f forping.yaml
-kubectl exec -it forping -- sh
-/ # ping <IP of any pod>
-`{{copy}}
+`kubectl apply -f forping.yaml`{{copy}}
+`kubectl exec -it forping -- sh`{{copy}}
+`ping <IP of any pod>`{{copy}}
 
 - Show the Pods detailed information and learn their IP addresses again.
 
