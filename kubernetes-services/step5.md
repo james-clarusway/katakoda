@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
       - name: web-flask-pod
-        image: clarusways/cw_web_flask1
+        image: clarusway/cw_web_flask1
         ports:
         - containerPort: 5000
 EOF
@@ -85,7 +85,7 @@ spec:
     spec:
       containers:
       - name: web-flask-pod
-        image: clarusways/cw_web_flask1
+        image: clarusway/cw_web_flask1
         ports:
         - containerPort: 5000
 EOF

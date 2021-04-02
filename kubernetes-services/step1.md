@@ -1,3 +1,8 @@
+- Check the readiness of nodes at the cluster on master node.
+
+`kubectl cluster-info
+kubectl get nodes`{{copy}}
+
 ## Kubernetes Services
 
 An abstract way to expose an application running on a set of Pods as a network service.
