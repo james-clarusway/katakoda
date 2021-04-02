@@ -50,4 +50,6 @@ EOF`{{copy}}
 
 The .spec.selector field is a label selector. 
 
-The `.spec.selector` field and `.spec.template.metadata` field must be same.
+The `.spec.selector` field and `.spec.template.metadata.label` field must be same.
+
+![pod selector](./pod-selector.png)
