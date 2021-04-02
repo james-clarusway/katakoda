@@ -16,7 +16,7 @@ metadata:
   labels:
     app: container-info
   annotations:
-    kubernetes.io/change-cause: deploy/clarus-deploy is set as container-info=clarusways/container-info:1.0
+    kubernetes.io/change-cause: deploy/clarus-deploy is set as container-info=clarusway/container-info:1.0
 spec:
   replicas: 3
   selector:
@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: container-info
-        image: clarusways/container-info:1.0
+        image: clarusway/container-info:1.0
         ports:
         - containerPort: 80
 EOF
@@ -43,7 +43,7 @@ EOF
 
 `kubectl get deploy,rs,po -l app=container-info`{{copy}}
 
-- Describe deployment and note the image of the deployment. In our case, it is clarusways/container-info:2.0.
+- Describe deployment and note the image of the deployment. In our case, it is clarusway/container-info:2.0.
 
 `kubectl describe deploy clarus-deploy`{{copy}}
 
@@ -57,7 +57,7 @@ EOF
 
 - Upgrade image.
 
-`kubectl set image deploy clarus-deploy container-info=clarusways/container-info:2.0 --record=true`{{copy}}
+`kubectl set image deploy clarus-deploy container-info=clarusway/container-info:2.0 --record=true`{{copy}}
 
 - Show the rollout history.
 
@@ -68,7 +68,7 @@ EOF
 `kubectl rollout history deploy clarus-deploy --revision=1
 kubectl rollout history deploy clarus-deploy --revision=2`{{copy}}
 
-- List the `Deployment`, `ReplicaSet` and `Pods` of `clarus-deploy` deployment using a label and explain ReplicaSets.
+- List the `Deployment`, `ReplicaSet` and `Pods` of `clarus-deploy` deployment using a label and pay attention to ReplicaSets. There are two replicaSets. The number of one is zero and the other one is three.
 
 `kubectl get deploy,rs,po -l app=container-info`{{copy}}
 
@@ -97,12 +97,12 @@ metadata:
 ```yaml
 ...
 ...
-    kubernetes.io/change-cause: kubectl set image deploy clarus-deploy container-info=clarusways/container-info:3.0
+    kubernetes.io/change-cause: kubectl set image deploy clarus-deploy container-info=clarusway/container-info:3.0
 ...
 ...
     spec:
       containers:
-      - image: clarusways/container-info:3.0
+      - image: clarusway/container-info:3.0
 ...
 ...
 ```
@@ -117,7 +117,7 @@ metadata:
 kubectl rollout history deploy clarus-deploy --revision=2
 kubectl rollout history deploy clarus-deploy --revision=3`{{copy}}
 
-- List the `Deployment`, `ReplicaSet` and `Pods` of `clarus-deploy` deployment using a label and explain ReplicaSets.
+- List the `Deployment`, `ReplicaSet` and `Pods` of `clarus-deploy` deployment using a label.
 
 `kubectl get deploy,rs,po -l app=container-info`{{copy}}
 
@@ -125,7 +125,7 @@ kubectl rollout history deploy clarus-deploy --revision=3`{{copy}}
 
 `kubectl rollout undo deploy clarus-deploy --to-revision=1`{{copy}}
 
-- Show the rollout history and show that we have revision 2, 3 and 4. Explain that original revision, which is `revision 1`, becomes `revision 4`.
+- Display the rollout history and note that we have revision 2, 3 and 4. Pay attention that original revision, which is `revision 1`, becomes `revision 4`.
 
 `kubectl rollout history deploy clarus-deploy
 kubectl rollout history deploy clarus-deploy --revision=2
@@ -136,7 +136,7 @@ kubectl rollout history deploy clarus-deploy --revision=4`{{copy}}
 
 `kubectl rollout history deploy clarus-deploy --revision=1`{{copy}}
 
-- List the `Deployment`, `ReplicaSet` and `Pods` of `mynginx` deployment using a label, and explain that the original ReplicaSet has been scaled up back to three and second ReplicaSet has been scaled down to zero.
+- List the `Deployment`, `ReplicaSet` and `Pods` of `mynginx` deployment using a label, and see that the original ReplicaSet has been scaled up back to three and second ReplicaSet has been scaled down to zero.
 
 `kubectl get deploy,rs,po -l app=container-info`{{copy}}
 
