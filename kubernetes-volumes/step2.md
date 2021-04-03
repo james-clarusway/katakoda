@@ -43,13 +43,13 @@ EOF
 
 `curl http://localhost/`{{copy}}
 
-- On host-2 change the `index.html`.
+- On node01 change the `index.html`.
 
 `cd pv-data`{{copy}}
 
 `echo "Kubernetes Rocks!!!!" > index.html`{{copy}}
 
-- On host1, check if the change is in effect.
+- On controlplane, check if the change is in effect.
 
 `kubectl exec -it clarus-pod -- /bin/bash`{{copy}}
 

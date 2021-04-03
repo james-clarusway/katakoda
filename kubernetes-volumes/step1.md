@@ -5,12 +5,12 @@ kubectl get nodes`{{copy}}
 
 ## Kubernetes Volume Persistence
 
--On host2, create a `pv-data` directory under home folder, also create an `index.html` file with `Welcome to Kubernetes persistence volume lesson` text and note down path of the `pv-data` folder.
+-On node01, create a `pv-data` directory under home folder, also create an `index.html` file with `Welcome to Kubernetes persistence volume lesson` text and note down path of the `pv-data` folder.
 
 `mkdir pv-data && cd pv-data`{{copy}}
 `echo "Welcome to Kubernetes persistence volume lesson" > index.html`{{copy}}
 
-- On host1, create a `clarus-pv.yaml` file using the following content with the volume type of `hostPath` to build a `PersistentVolume`.
+- On controlplane, create a `clarus-pv.yaml` file using the following content with the volume type of `hostPath` to build a `PersistentVolume`.
 
 ```
 cat << EOF > clarus-pv.yaml
