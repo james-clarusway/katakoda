@@ -27,7 +27,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/ubuntu/pv-data"
+    path: "/root/pv-data"
 EOF
 ```{{copy}}
 
