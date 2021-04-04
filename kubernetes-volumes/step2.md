@@ -47,7 +47,7 @@ EOF
 
 `cd pv-data`{{copy}}
 
-`echo "Kubernetes Rocks!!!!" > index.html`{{copy}}
+`echo "Kubernetes Rocks..." > index.html`{{copy}}
 
 - On controlplane, check if the change is in effect.
 
