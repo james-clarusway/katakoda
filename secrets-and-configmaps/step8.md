@@ -1,0 +1,64 @@
+## Configure all key-value pairs in a ConfigMap as container environment variables
+
+We will update the `configmap.yaml` as follows:
+
+```
+cat << EOF > configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-config
+data:
+  greeting: Hola
+EOF
+```{{copy}}
+
+We will update the `deployment.yaml` as follows:
+
+```
+cat << EOF > deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+        - name:  demo
+          image: clarusways/demo:hello-config-env
+          ports:
+            - containerPort: 8888
+          env:
+            - name: GREETING
+              valueFrom:
+                configMapKeyRef:
+                  name: demo-config
+                  key: greeting
+EOF
+```{{copy}}
+
+Note that this time, we are not placing the `GREETING` as run arguments. This time we will inject this variable as `environment variable`.
+
+`kubectl apply -f k8s`{{copy}}
+
+`kubectl get svc`{{copy}}
+
+`curl localhost:nodePort`{{copy}}
+
+The output:
+
+```
+Hola, Clarusway!
+```
+
+- Reset what we have created.
+
+`kubectl delete -f k8s`{{copy}}
