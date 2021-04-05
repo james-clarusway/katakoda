@@ -39,7 +39,7 @@ EOF
 ```{{copy}}
 Note the application run parameter (`args`) and `ConfigMap` reference in container section.
 
-## Create and use ConfigMaps with `kubectl create configmap` command
+## Create and use ConfigMaps with kubectl create configmap command
 
 There are three ways to create ConfigMaps using the `kubectl create configmap` command. Here are the options.
 

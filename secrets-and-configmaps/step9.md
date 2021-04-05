@@ -46,7 +46,7 @@ spec:
           - configMapRef:
               name: demo-config
 EOF
-```
+```{{copy}}
 
 Note the change as follows:
 
@@ -63,7 +63,7 @@ Note the change as follows:
 
 `kubectl get svc`{{copy}}
 
-`curl localhost:nodePort
+`curl localhost:<nodePort>`{{copy}}
 
 The output:
 

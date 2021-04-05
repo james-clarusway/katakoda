@@ -14,7 +14,7 @@ data:
   config: |
     greeting: Buongiorno
 EOF
-```
+```{{copy}}
 
 Note the greeting message is changed.
 
@@ -51,7 +51,7 @@ spec:
           - key: config
             path: demo.yaml
 EOF
-```
+```{{copy}}
 
 `Service` is the same.
 
