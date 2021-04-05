@@ -59,7 +59,7 @@ Note the change as follows:
 
 - You can compare with the previos `deployment.yaml` file.
 
-`kubectl apply -f k8s`{{copy}}
+`kubectl apply -f .`{{copy}}
 
 `kubectl get svc`{{copy}}
 
@@ -73,4 +73,4 @@ Merhaba, Clarusway!
 
 Everything works fine!
 
-`kubectl delete -f k8s`{{copy}}
+`kubectl delete -f .`{{copy}}

@@ -36,7 +36,7 @@ spec:
                   name: demo-config
                   key: greeting
 EOF
-```
+```{{copy}}
 Note the application run parameter (`args`) and `ConfigMap` reference in container section.
 
 ## Create and use ConfigMaps with `kubectl create configmap` command
@@ -67,7 +67,7 @@ We will start with the third option. We have just one parameter. Greet with "Hal
 
 - List the services.
 
-`kubectl get svc -o wide`
+`kubectl get svc -o wide`{{copy}}
 
 - See the message.
 

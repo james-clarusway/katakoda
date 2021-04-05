@@ -20,12 +20,6 @@ Hello, Clarusway!
 
 We will parametrized the "Hello" portion in some languages.
 
-`mkdir k8s && cd k8s`{{copy}}
-
-- Create 2 files.
-
-- deployment.yaml
-
 ```
 cat << EOF > deployment.yaml
 apiVersion: apps/v1
@@ -79,7 +73,7 @@ cd ..`{{copy}}
 
 - Now apply `kubectl` to these files.
 
-`kubectl apply -f k8s`{{copy}}
+`kubectl apply -f .`{{copy}}
 
 Let's see the message.
 
@@ -96,4 +90,4 @@ This is the default container behaviour.
 
 Now delete what we have created.
 
-`kubectl delete -f k8s`{{copy}}
+`kubectl delete -f .`{{copy}}

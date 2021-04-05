@@ -47,7 +47,7 @@ EOF
 
 Note that this time, we are not placing the `GREETING` as run arguments. This time we will inject this variable as `environment variable`.
 
-`kubectl apply -f k8s`{{copy}}
+`kubectl apply -f .`{{copy}}
 
 `kubectl get svc`{{copy}}
 
@@ -61,4 +61,4 @@ Hola, Clarusway!
 
 - Reset what we have created.
 
-`kubectl delete -f k8s`{{copy}}
+`kubectl delete -f .`{{copy}}
