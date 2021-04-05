@@ -67,7 +67,7 @@ spec:
             key: password    # This is name of data
   restartPolicy: Never
 EOF
-```
+```{{copy}}
 
 - Create the pod.
 
