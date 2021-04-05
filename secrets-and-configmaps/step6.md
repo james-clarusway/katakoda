@@ -1,80 +1,18 @@
-
-
 ### From a config file
 
 - We will write the greeting key-value pair in a file in Norvegian and create the ConfigMap from this file.
 
-```bash
-echo "greeting: Hei" > config
-```
+`echo "greeting: Hei" > config`{{copy}}
 
 Note that, the comman notation used in key-value pairs is to use `key= value` notation, but this is not an obligatory. The notation actualy depends on the application implementation that will parse and use these files.
 
-- Look at the other example files that look like below
-
-```bash
-$ ls 
-game.properties
-ui.properties
-
-$ cat game.properties
-enemies=aliens
-lives=3
-enemies.cheat=true
-enemies.cheat.level=noGoodRotten
-secret.code.passphrase=UUDDLRLRBABAS
-secret.code.allowed=true
-secret.code.lives=30
-
-$ cat ui.properties
-color.good=purple
-color.bad=yellow
-allow.textmode=true
-how.nice.to.look=fairlyNice
-```
-
 - Let's create our configmap from `config` file.
 
-```bash
-$ kubectl create configmap demo-config --from-file=./config
-configmap/demo-config created
-```
+`kubectl create configmap demo-config --from-file=./config`{{copy}}
 
 - Check the content of the `configmap/demo-config`.
 
-```bash
-$ kubectl get  configmap/demo-config -o json
-{
-    "apiVersion": "v1",
-    "data": {
-        "config": "greeting: Hei\n"
-    },
-    "kind": "ConfigMap",
-    "metadata": {
-        "creationTimestamp": "2020-09-05T20:50:20Z",
-        "managedFields": [
-            {
-                "apiVersion": "v1",
-                "fieldsType": "FieldsV1",
-                "fieldsV1": {
-                    "f:data": {
-                        ".": {},
-                        "f:config": {}
-                    }
-                },
-                "manager": "kubectl-create",
-                "operation": "Update",
-                "time": "2020-09-05T20:50:20Z"
-            }
-        ],
-        "name": "demo-config",
-        "namespace": "default",
-        "resourceVersion": "42439",
-        "selfLink": "/api/v1/namespaces/default/configmaps/demo-config",
-        "uid": "56c45b30-0cfc-4e10-b0bd-adad48fde93f"
-    }
-}
-```
+`kubectl get  configmap/demo-config -o json`{{copy}}
 
 We have modifed our application to read parameters from the file. So the `deployment` file changed as follows:
 
