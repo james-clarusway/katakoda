@@ -49,46 +49,11 @@ Secrets can be retrieved by running kubectl get secret. For example, you can vie
 
 `kubectl get secret mysecret -o yaml`{{copy}}
 
-The output is similar to:
-```text
-apiVersion: v1
-data:
-  password: MWYyZDFlMmU2N2Rm
-  username: YWRtaW4=
-kind: Secret
-metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","data":{"password":"MWYyZDFlMmU2N2Rm","username":"YWRtaW4="},"kind":"Secret","metadata":{"annotations":{},"name":"mysecret","namespace":"default"},"type":"Opaque"}
-  creationTimestamp: "2020-09-06T17:39:17Z"
-  managedFields:
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:data:
-        .: {}
-        f:password: {}
-        f:username: {}
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:kubectl.kubernetes.io/last-applied-configuration: {}
-      f:type: {}
-    manager: kubectl-client-side-apply
-    operation: Update
-    time: "2020-09-06T17:39:17Z"
-  name: mysecret
-  namespace: default
-  resourceVersion: "98708"
-  selfLink: /api/v1/namespaces/default/secrets/mysecret
-  uid: c9589ee5-37f8-4ec8-9233-67c110b9f928
-type: Opaque
-```
-
 Decode the password field:
 `echo 'MWYyZDFlMmU2N2Rm' | base64 --decode`{{copy}}
 
 The output is similar to:
-```text
+
+```
 1f2d1e2e67df
 ```
