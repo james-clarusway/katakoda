@@ -5,7 +5,7 @@ Now, we will create `ConfigMap` and use the `greeting` key-value pair as in the 
 The modified `deployment.yaml` file.
 
 ```
-cat << EOF > deployment.yaml
+echo ' 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,8 +25,8 @@ spec:
           image: clarusway/demo:hello-config-args
           imagePullPolicy: Always
           args:
-            - '-greeting'
-            - '$(GREETING)'
+            - "-greeting"
+            - "$(GREETING)"
           ports:
             - containerPort: 8888
           env:
@@ -35,7 +35,7 @@ spec:
                 configMapKeyRef:
                   name: demo-config
                   key: greeting
-EOF
+' > deployment.yaml
 ```{{copy}}
 Note the application run parameter (`args`) and `ConfigMap` reference in container section.
 
