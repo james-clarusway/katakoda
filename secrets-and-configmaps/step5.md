@@ -25,8 +25,8 @@ spec:
           image: clarusway/demo:hello-config-args
           imagePullPolicy: Always
           args:
-            - "-greeting"
-            - "$(GREETING)"
+            - '-greeting'
+            - '$(GREETING)'
           ports:
             - containerPort: 8888
           env:
