@@ -1,6 +1,6 @@
 {
   "title": "Docker Lab",
-  "description": "",
+  "description": "The purpose of this lab is to provide an environment for students to practice docker.",
   "difficulty": "Beginner",
   "time": "20m.",
   "details": {
