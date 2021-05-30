@@ -1,0 +1,1 @@
+The purpose of this lab is to provide an environment for students to practice docker.
